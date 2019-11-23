@@ -1,0 +1,14 @@
+[alias]
+    pretty-log = !git --no-pager log \
+        --color --graph --abbrev-commit --decorate=auto \
+        --pretty=format:"'%w(72,2,5)%C(ul #f08000)%h%C(noul):%Creset %C(bold)%s%Creset%n%C(#f08000)└%C(dim #f08000)%an, %cr%+gD%Creset'" \
+        | less -FR~
+    plog = !git pretty-log
+[user]
+	email = ludovic.fernandez@epitech.eu
+	name = Renard
+	github = fox-tek
+[core]
+	excludesfile = /home/renard/repos/delivery/epitech-gitignore
+[merge]
+	tool = vimdiff
