@@ -1,0 +1,7 @@
+[Default Applications]
+application/pdf=org.kde.okular.desktop
+application/xhtml_xml=vivaldi-stable.desktop
+text/html=vivaldi-stable.desktop
+text/plain=vim.desktop
+x-scheme-handler/http=vivaldi-stable.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
