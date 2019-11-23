@@ -16,6 +16,7 @@ cd $HOME
     && ln -s $CWD/.vimrc .vimrc
     && ln -s $CWD/.gitconfig .
     && ln -s $CWD/gdb-dashboard/.gdbinit .
+    && ln -s $CWD/gdbinit.d/ .
 
 mkdir -p "$HOME/.config" "HOME/.local"
 cd $HOME/.config
