@@ -211,6 +211,8 @@
     exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.local/mybin/lock
     # Start a terminal
     exec --no-startup-id i3-sensible-terminal
+    # Mail tray icon
+    exec --no-startup-id birdtray
     # Volume tray icon
     exec --no-startup-id volumeicon
 
