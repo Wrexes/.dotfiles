@@ -11,16 +11,14 @@ SETUVAR --export XDG_USER_CONFIG_DIR:/home/renard/\x2econfig
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
-SETUVAR _fish_abbr__2B_R:grep\x20\x2dR
 SETUVAR _fish_abbr__2B_x:chmod\x20\x2bx
 SETUVAR _fish_abbr_bluh:blih\x20\x2du\x20ludovic\x2efernandez\x40epitech\x2eeu
 SETUVAR _fish_abbr_brh:git\x20branch
-SETUVAR _fish_abbr_ciph:echo\x20LONEYTUSARFPDHIKZBCGJMQVWX\x20\x7c\x20tr\x20\x27\x5bA\x2dZ\x5d\x27
 SETUVAR _fish_abbr_clone:git\x20clone
 SETUVAR _fish_abbr_cov:gcovr\x20\x2ds\x20\x2d\x2dexclude\x20tests\x20\x2d\x2dexclude\x2dunreachable\x2dbranches
 SETUVAR _fish_abbr_deliv:cd\x20/home/renard/repos/delivery
 SETUVAR _fish_abbr_fetch:git\x20fetch\x20\x2d\x2dall
-SETUVAR _fish_abbr_fix:rm\x20chair\x20\x26\x26\x20ln\x20\x2dsr\x20\x2e\x2e/\x2e\x2e/Professors/Hendrik\x5c\x20Lorentz\x20chair
+SETUVAR _fish_abbr_gRep:grep\x20\x2dR
 SETUVAR _fish_abbr_gcb:gcc\x20\x2dggdb3\x20\x2drdynamic\x20\x2dWall\x20\x2dWextra\x20\x2dWerror\x20\x2diquote\x20\x2e/include
 SETUVAR _fish_abbr_gco:git\x20checkout
 SETUVAR _fish_abbr_gcw:gcc\x20\x2dWall\x20\x2dWextra
@@ -47,8 +45,6 @@ SETUVAR _fish_abbr_rmr:rm\x20\x2dr
 SETUVAR _fish_abbr_shc:sh\x20\x2dc
 SETUVAR _fish_abbr_stash:git\x20stash
 SETUVAR _fish_abbr_tcovr:gcovr\x20\x2ds\x20\x2d\x2dexclude\x3d\x27\x2e\x2atest_\x2e\x2a\x27\x20\x2d\x2dexclude\x2dunreachable\x2dbranches
-SETUVAR _fish_abbr_test__it:rm\x20\x2dv\x20\x2a\x2a/\x2a\x2e\x7bgcda\x2c\x20gcno\x7d\x20\x26\x26\x20gcc\x20\x2dWall\x20\x2dWextra\x20\x2dWerror\x20\x2dlcriterion\x20\x2d\x2dcoverage\x20src/\x2a\x2ec\x20tests/\x2a\x2ec\x20\x2do\x20unit_tests\x20\x2diquote\x20\x2e/include/\x20\x2diquote\x20\x2e/lib/include\x20\x26\x26\x20\x2e/unit_tests\x20\x26\x26\x20gcovr\x20\x2d\x2dexclude\x20tests/
-SETUVAR _fish_abbr_ttt:gcc\x20\x2dWall\x20\x2dWextra\x20\x2dWerror\x20\x2dlcriterion\x20\x2diquote\x20\x2e/include/\x20\x2diquote\x20\x2e/lib/include/\x20src/\x2a\x2a\x2ec\x20tests/\x2a\x2a\x2ec\x20\x2do\x20unit_tests\x20\x2d\x2dcoverage\x0aand\x20\x2e/unit_tests\x20\x2d\x2dalways\x2dsucceed\x20\x2d\x2dtimeout\x205\x20\x26\x26\x20echo\x0aand\x20echo\x20\x27Branch\x20coverage\x20\x3a\x27\x20\x26\x26\x20gcovr\x20\x2dbse\x20tests/\x0aand\x20echo\x20\x2de\x20\x27\x5cnLine\x20coverage\x20\x3a\x27\x20\x26\x26\x20gcovr\x20\x2ddse\x20tests/\x20\x26\x26\x20rm\x20\x2a\x2a\x2egcno
 SETUVAR _fish_abbr_xopen:xdg\x2dopen
 SETUVAR --export cfg_ENV:/home/renard/\x2econfig/fish/conf\x2ed/userenv\x2efish
 SETUVAR --export --path cfg_PATH:/home/renard/\x2econfig/fish/conf\x2ed/userpath\x2efish
