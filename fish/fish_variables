@@ -3,6 +3,7 @@
 SETUVAR --export ACADEMIC_YEAR:2019
 SETUVAR --export BAT_THEME:Sublime\x20Snazzy
 SETUVAR --export CFGDIR:/home/renard/\x2econfig
+SETUVAR --export DOTDIR:/home/renard/dotfiles
 SETUVAR --export EDITOR:/sbin/vim
 SETUVAR --export FILEMANAGER:\x1d
 SETUVAR --export PRISMA_MANAGEMENT_API_SECRET:megasaucisse42\x3f
@@ -51,11 +52,11 @@ SETUVAR _fish_abbr_ttt:gcc\x20\x2dWall\x20\x2dWextra\x20\x2dWerror\x20\x2dlcrite
 SETUVAR _fish_abbr_xopen:xdg\x2dopen
 SETUVAR --export cfg_ENV:/home/renard/\x2econfig/fish/conf\x2ed/userenv\x2efish
 SETUVAR --export --path cfg_PATH:/home/renard/\x2econfig/fish/conf\x2ed/userpath\x2efish
-SETUVAR --export cfg_clgfrmt:/home/renard/\x2econfig/clang\x2dformat/\x2eclang\x2dformat
+SETUVAR --export cfg_clgfrmt:/home/renard/dotfiles/clang\x2dformat/\x2eclang\x2dformat
 SETUVAR --export cfg_dunst:/home/renard/\x2econfig/dunst/dunstrc
 SETUVAR --export cfg_fish:/home/renard/\x2econfig/fish/config\x2efish
 SETUVAR --export cfg_gdb:/home/renard/\x2econfig/gdb/gef\x2epy
-SETUVAR --export cfg_gdbdash:/home/renard/\x2econfig/gdb/gdbinit\x2ddashboard
+SETUVAR --export cfg_gdbdash:/home/renard/dotfiles/gdb\x2ddashboard/\x2egdbinit
 SETUVAR --export cfg_gef:/home/renard/\x2econfig/gdb/gef/gef\x2epy
 SETUVAR --export cfg_i3:/home/renard/\x2econfig/i3/config
 SETUVAR --export cfg_kitty:/home/renard/\x2econfig/kitty/kitty\x2econf
@@ -65,10 +66,11 @@ SETUVAR --export cfg_rofi:/home/renard/\x2econfig/rofi/config\x2erasi
 SETUVAR --export cfg_starship:/home/renard/\x2econfig/starship\x2etoml
 SETUVAR --export cfg_vim:/home/renard/\x2econfig/vim/vimrc
 SETUVAR --export cfgd_X:/home/renard/\x2econfig/X11
-SETUVAR --export cfgd_clgfrmt:/home/renard/\x2econfig/clang\x2dformat
+SETUVAR --export cfgd_clgfrmt:/home/renard/dotfiles/clang\x2dformat
 SETUVAR --export cfgd_dunst:/home/renard/\x2econfig/dunst
 SETUVAR --export cfgd_fish:/home/renard/\x2econfig/fish
-SETUVAR --export cfgd_gdb:/home/renard/\x2econfig/gdb
+SETUVAR --export cfgd_gdb:/home/renard/dotfiles/gdbinit\x2ed
+SETUVAR --export cfgd_gdbdash:/home/renard/dotfiles/gdb\x2ddashboard
 SETUVAR --export cfgd_i3:/home/renard/\x2econfig/i3
 SETUVAR --export cfgd_kitty:/home/renard/\x2econfig/kitty
 SETUVAR --export cfgd_ly:/etc/ly
