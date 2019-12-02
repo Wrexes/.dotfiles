@@ -27,6 +27,12 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pathogen init (do not touch)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+call pathogen#helptags()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -454,8 +460,11 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 " Airline: automatically display all buffers when only one tab is open
 let g:airline#extensions#tabline#enabled = 1
 
+" Airline: Show Airline on top
+let g:airline_statusline_ontop=1
+
 " Airline: tail formatter
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " Airline: theme
 let g:airline_theme='simple'
@@ -480,9 +489,3 @@ nmap <leader>f :YcmCompleter FixIt<cr>
 " Vim Goto Header: Press F12 at any time when on a header's include line to go to it
 nnoremap <F12> :GotoHeader <CR>
 imap <F12> <Esc>:GotoHeader <CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pathogen init (do not touch)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-execute pathogen#infect()
-call pathogen#helptags()
