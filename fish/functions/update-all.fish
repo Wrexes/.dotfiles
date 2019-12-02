@@ -1,16 +1,11 @@
-# Defined in /tmp/fish.SaZBtO/update-all.fish @ line 2
+# Defined in /tmp/fish.zY5HdU/update-all.fish @ line 2
 function update-all --description 'Update everything with a single command.'
-	figlet -tf slant "YAY"
-    figlet -tf small "Cleaning cache..."
+	figlet -tf small "Cleaning cache..."
     yay -Yc
     yay -Sc
     figlet -tf small "Updating packages..."
     yay
     echo; echo;
-
-    #figlet -tf slant "N P M"
-    #sudo npm up -g
-    #echo; echo;
 
     figlet -tf slant "Oh My Fish !"
     omf update
@@ -23,10 +18,11 @@ function update-all --description 'Update everything with a single command.'
 
     set -l CWD (pwd)
     figlet -tf slant "Vim plugins"
-    cd $DOTDIR/.vim/bundle/vim-template/templates
+    cd $DOTDIR/.vim/
     and git submodule update --init --recursive
+    cd bundle/vim-template/templates
     and for tmplt in (ls ../../../template-save)
-            rm $tmplt
+            rm -f $tmplt
         end
     and ln -s ../../../template-save/* .
     and cd $DOTDIR/.vim && stage . && commit -m "[VIM] Automatic plugin update" && git push
