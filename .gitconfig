@@ -10,5 +10,22 @@
 	github = fox-tek
 [core]
 	excludesfile = /home/renard/repos/delivery/epitech-gitignore
+	pager = diff-so-fancy | bat --style=numbers,grid,snip
 [merge]
 	tool = vimdiff
+[diff-so-fancy]
+	rulerWidth = 47
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = blue bold
+	frag = blue dim
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
