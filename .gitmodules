@@ -4,39 +4,39 @@
 [submodule "gdb-dashboard"]
 	path = gdb-dashboard
 	url = https://github.com/cyrus-and/gdb-dashboard.git
-[submodule ".vimpkg/bundle/auto-pairs"]
-	path = .vimpkg/bundle/auto-pairs
+[submodule ".vim/bundle/auto-pairs"]
+	path = .vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule ".vimpkg/bundle/Gummybears"]
-	path = .vimpkg/bundle/Gummybears
+[submodule ".vim/bundle/Gummybears"]
+	path = .vim/bundle/Gummybears
 	url = https://github.com/vim-scripts/Gummybears.git
-[submodule ".vimpkg/bundle/Jellybeans"]
-    path = .vimpkg/bundle/Jellybeans
+[submodule ".vim/bundle/Jellybeans"]
+    path = .vim/bundle/Jellybeans
     url = https://github.com/nanotech/jellybeans.vim.git
-[submodule ".vimpkg/bundle/pathogen"]
-	path = .vimpkg/bundle/pathogen
+[submodule ".vim/bundle/pathogen"]
+	path = .vim/bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vimpkg/bundle/tagbar"]
-	path = .vimpkg/bundle/tagbar
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vimpkg/bundle/Vim-Goto-Header"]
-    path = .vimpkg/bundle/Vim-Goto-Header
+[submodule ".vim/bundle/Vim-Goto-Header"]
+    path = .vim/bundle/Vim-Goto-Header
     url = https://github.com/Yohannfra/Vim-Goto-Header.git
-[submodule ".vimpkg/bundle/nerdtree"]
-    path = .vimpkg/bundle/nerdtree
+[submodule ".vim/bundle/nerdtree"]
+    path = .vim/bundle/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vimpkg/bundle/vim-fugitive"]
-    path = .vimpkg/bundle/vim-fugitive
+[submodule ".vim/bundle/vim-fugitive"]
+    path = .vim/bundle/vim-fugitive
     url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vimpkg/bundle/vim-airline"]
-    path = .vimpkg/bundle/vim-arline
-    url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vimpkg/bundle/vim-airline-themes"]
-    path = .vimpkg/bundle/vim-airline-themes
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/bundle/vim-airline-themes"]
+    path = .vim/bundle/vim-airline-themes
     url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule ".vimpkg/bundle/vim-template"]
-    path = .vimpkg/bundle/vim-template
+[submodule ".vim/bundle/vim-template"]
+    path = .vim/bundle/vim-template
     url = https://github.com/aperezdc/vim-template.git
-[submodule ".vimpkg/bundle/vim-clang-format"]
-    path = .vimpkg/bundle/vim-clang-format
+[submodule ".vim/bundle/vim-clang-format"]
+    path = .vim/bundle/vim-clang-format
     url = https://github.com/rhysd/vim-clang-format.git
