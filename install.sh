@@ -12,7 +12,7 @@ CWD=$(pwd)
 git submodule update --init --recursive
 
 ln -s $CWD/clang-format/.clang-format $HOME/
-ln -s $CWD/.vimrc $HOME/
+ln -s $CWD/.vim* $HOME/
 ln -s $CWD/.gitconfig $HOME/
 ln -s $CWD/gdb-dashboard/.gdbinit $HOME/
 ln -s $CWD/.gdbinit.d/ $HOME/
@@ -27,3 +27,9 @@ ln -s $CWD/fish $HOME/.config/
 ln -s $CWD/rofi $HOME/.config/
 ln -s $CWD/omf $HOME/.config/
 ln -s $CWD/kitty $HOME/.config/
+
+for template in $(ls .vimpkg/template-save);
+do
+    rm .vimpkg/bundle/vim-template/templates/$template
+    ln -s $CWD/.vimpkg/template-save/$template $CWD/.vimpkg/bundle/vim-template/templates/
+done
