@@ -12,10 +12,6 @@ function update-all --description 'Update everything with a single command.'
     #sudo npm up -g
     #echo; echo;
 
-    #figlet -tf slant "APT-Vim"
-    #apt-vim update
-    #echo; echo;
-
     figlet -tf slant "Oh My Fish !"
     omf update
     echo; echo;
@@ -24,4 +20,15 @@ function update-all --description 'Update everything with a single command.'
     fisher self-update
     fisher
     echo; echo;
+
+    set -l CWD (pwd)
+    figlet -tf slant "Vim plugins"
+    cd $DOTDIR/.vimpkg/bundle/vim-template/templates
+    and git submodule update --init --recursive
+    and for tmplt in (ls ../../../template-save)
+        rm $tmplt
+        end
+    and ln -s ../../../template-save/* .
+    and cd $DOTDIR/.vimpkg && stage . && commit -m "[VIM] Automatic plugin update" && git push
+    cd $CWD
 end
