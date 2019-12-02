@@ -298,7 +298,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 set laststatus=0
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -460,11 +460,11 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 " Airline: automatically display all buffers when only one tab is open
 let g:airline#extensions#tabline#enabled = 1
 
-" Airline: Show Airline on top
-let g:airline_statusline_ontop=1
-
 " Airline: tail formatter
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+" Airline: Show Airline on top
+let g:airline_statusline_ontop=1
 
 " Airline: theme
 let g:airline_theme='simple'
