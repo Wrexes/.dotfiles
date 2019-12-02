@@ -15,7 +15,7 @@ ln -s $CWD/clang-format/.clang-format $HOME/
 ln -s $CWD/.vimrc $HOME/
 ln -s $CWD/.gitconfig $HOME/
 ln -s $CWD/gdb-dashboard/.gdbinit $HOME/
-ln -s $CWD/gdbinit.d/ $HOME/
+ln -s $CWD/.gdbinit.d/ $HOME/
 
 mkdir -p "$HOME/.config" "HOME/.local"
 ln -s $CWD/mimeapps.list $HOME/.config/
