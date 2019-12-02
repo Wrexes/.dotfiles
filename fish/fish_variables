@@ -16,6 +16,7 @@ SETUVAR _fish_abbr_bluh:blih\x20\x2du\x20ludovic\x2efernandez\x40epitech\x2eeu
 SETUVAR _fish_abbr_brh:git\x20branch
 SETUVAR _fish_abbr_clone:git\x20clone
 SETUVAR _fish_abbr_cov:gcovr\x20\x2ds\x20\x2d\x2dexclude\x20tests\x20\x2d\x2dexclude\x2dunreachable\x2dbranches
+SETUVAR _fish_abbr_cpat:cp\x20\x2dat
 SETUVAR _fish_abbr_deliv:cd\x20/home/renard/repos/delivery
 SETUVAR _fish_abbr_fetch:git\x20fetch\x20\x2d\x2dall
 SETUVAR _fish_abbr_gRep:grep\x20\x2dR
@@ -40,11 +41,13 @@ SETUVAR _fish_abbr_mtest:make\x20tests
 SETUVAR _fish_abbr_nmd:networkmanager_dmenu
 SETUVAR _fish_abbr_plog:git\x20pretty\x2dlog
 SETUVAR _fish_abbr_rebase:git\x20rebase
-SETUVAR _fish_abbr_remotes:git\x20remote\x20v
+SETUVAR _fish_abbr_remotes:git\x20remote\x20\x2dv
 SETUVAR _fish_abbr_rmr:rm\x20\x2dr
 SETUVAR _fish_abbr_shc:sh\x20\x2dc
 SETUVAR _fish_abbr_stash:git\x20stash
 SETUVAR _fish_abbr_tcovr:gcovr\x20\x2ds\x20\x2d\x2dexclude\x3d\x27\x2e\x2atest_\x2e\x2a\x27\x20\x2d\x2dexclude\x2dunreachable\x2dbranches
+SETUVAR _fish_abbr_tsc:tizonia\x20\x2d\x2dsoundcloud\x2d
+SETUVAR _fish_abbr_uplfox:stage\x20lib/libfox/\x20\x26\x26\x20commit\x20\x2dm\x20\x22chore\x28Libfox\x29\x20Update\x20libfox\x20to\x20latest\x20commit\x22
 SETUVAR _fish_abbr_xopen:xdg\x2dopen
 SETUVAR --export cfg_ENV:/home/renard/\x2econfig/fish/conf\x2ed/userenv\x2efish
 SETUVAR --export --path cfg_PATH:/home/renard/\x2econfig/fish/conf\x2ed/userpath\x2efish
@@ -60,19 +63,19 @@ SETUVAR --export cfg_ly:/etc/ly/config\x2eini
 SETUVAR --export cfg_nmd:/home/renard/\x2econfig/networkmanager\x2ddmenu/config\x2eini
 SETUVAR --export cfg_rofi:/home/renard/\x2econfig/rofi/config\x2erasi
 SETUVAR --export cfg_starship:/home/renard/\x2econfig/starship\x2etoml
-SETUVAR --export cfg_vim:/home/renard/\x2econfig/vim/vimrc
+SETUVAR --export cfg_vim:/home/renard/dotfiles/\x2evimrc
 SETUVAR --export cfgd_X:/home/renard/\x2econfig/X11
 SETUVAR --export cfgd_clgfrmt:/home/renard/dotfiles/clang\x2dformat
 SETUVAR --export cfgd_dunst:/home/renard/\x2econfig/dunst
 SETUVAR --export cfgd_fish:/home/renard/\x2econfig/fish
-SETUVAR --export cfgd_gdb:/home/renard/dotfiles/gdbinit\x2ed
+SETUVAR --export cfgd_gdb:/home/renard/dotfiles/\x2egdbinit\x2ed
 SETUVAR --export cfgd_gdbdash:/home/renard/dotfiles/gdb\x2ddashboard
 SETUVAR --export cfgd_i3:/home/renard/\x2econfig/i3
 SETUVAR --export cfgd_kitty:/home/renard/\x2econfig/kitty
 SETUVAR --export cfgd_ly:/etc/ly
 SETUVAR --export cfgd_nmd:/home/renard/\x2econfig/networkmanager\x2ddmenu
 SETUVAR --export cfgd_rofi:/home/renard/\x2econfig/rofi
-SETUVAR --export cfgd_vim:/home/renard/\x2econfig/vim
+SETUVAR --export cfgd_vim:/home/renard/dotfiles/\x2evim
 SETUVAR --export confdir:/home/renard/\x2econfig
 SETUVAR --export delivery:/home/renard/repos/delivery
 SETUVAR fish_color_autosuggestion:555\x1ebrblack

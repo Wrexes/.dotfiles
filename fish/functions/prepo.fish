@@ -1,4 +1,4 @@
-# Defined in /tmp/fish.899PE0/prepo.fish @ line 2
+# Defined in /tmp/fish.8kM3hi/prepo.fish @ line 2
 function prepo --description 'Set up a repo via BLIH'
 	test (count $argv) -ne 1 && echo "Usage: prepo REPONAME (without year)" >&2 &&return 1;
 
@@ -14,7 +14,7 @@ function prepo --description 'Set up a repo via BLIH'
     and cd $REPO
     and mkdir -p include/tests src tests lib dontpush
     and cp -a $lfox lib/
-    and rm -rf lib/libfox/.git* **LICENSE
+    and rm -rf lib/libfox/{.git*, LICENSE, libfox-trail.*, dependency}
     and cp $tekgi .gitignore
     and cp -at. $mktemplate/*
 
