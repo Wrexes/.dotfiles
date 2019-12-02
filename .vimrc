@@ -30,7 +30,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pathogen init (do not touch)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-runtime bundle/pathogen/autoload/pathogen.vim
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 call pathogen#helptags()
 
@@ -294,8 +294,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
+" Never show the status line (plugins do better)
+set laststatus=0
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
