@@ -172,14 +172,14 @@ set ffs=unix,dos,mac
 
 " Chose a theme depending on wether you're using term or TTY
 if &term == "linux"
-    source $XDG_USER_CONFIG_DIR/vim/bundle/Jellybeans/colors/jellybeans.vim
+    source ~/.vim/bundle/Jellybeans/colors/jellybeans.vim
     let g:jellybeans_overrides = {
                 \'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
                 \}
     let g:jellybeans_use_term_italics = 1
     let g:jellybeans_use_lowcolor_black = 1
 else
-    source $XDG_USER_CONFIG_DIR/vim/bundle/Gummybears/colors/gummybears.vim
+    source ~/.vim/bundle/Gummybears/colors/gummybears.vim
     " Disable text having a different BG than empty lines
     hi Normal ctermbg=0
     hi LineNr ctermfg=DarkGrey
@@ -249,8 +249,10 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 map <leader>ba :bufdo bd<cr>
 
 " Move between buffers
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+map <S-PageUp> :bprevious<cr>
+map <S-PageDown> :bnext<cr>
+imap <S-PageUp> <Esc>:bprevious<cr>
+imap <S-PageDown> <Esc>:bnext<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -459,7 +461,9 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='simple'
 
 " CLang Format: integration in Normal and Visual mode
-map <C-K> :py3file /usr/share/clang/clang-format.py<cr>
+let g:clang_format#detect_style_file=1
+autocmd FileType c,cpp,objc nnoremap <buffer><C-K> :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><C-K> :ClangFormat<CR>
 
 " Tagbar: Toggle
 nmap <F8> :TagbarToggle<CR>
