@@ -28,11 +28,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pathogen init (do not touch)
+" => VimPlug init (do not touch)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-call pathogen#helptags()
+source ~/.vim/plugsettings.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -58,6 +56,7 @@ let mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>W :w!<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -71,10 +70,6 @@ command W w !sudo tee % > /dev/null
 " Switch back to absolute when loosing focus
 set number
 set relativenumber
-
-" Higlight characters that exceed a 80 columns limit
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-match OverLength /\%>80v.\+/
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
@@ -144,10 +139,8 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
-
 " Add a bit extra margin to the left
 " set foldcolumn=1
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -178,18 +171,24 @@ set ffs=unix,dos,mac
 
 " Chose a theme depending on wether you're using term or TTY
 if &term == "linux"
-    source ~/.vim/bundle/Jellybeans/colors/jellybeans.vim
+    source ~/.vim/plugged/jellybeans.vim/colors/jellybeans.vim
     let g:jellybeans_overrides = {
                 \'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
                 \}
     let g:jellybeans_use_term_italics = 1
     let g:jellybeans_use_lowcolor_black = 1
 else
-    source ~/.vim/bundle/Gummybears/colors/gummybears.vim
+    source ~/.vim/plugged/Gummybears/colors/gummybears.vim
     " Disable text having a different BG than empty lines
     hi Normal ctermbg=0
     hi LineNr ctermfg=DarkGrey
 endif
+
+" Higlight characters that exceed a 80 columns limit
+" In C/C++ projects
+autocmd BufEnter *.c,*.cpp,*.h,*.hpp
+            \ highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9 |
+            \ match OverLength /\%>79v.\+/
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -249,6 +248,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Close the current buffer
+map <C-W>w :Bclose<cr>
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
@@ -428,6 +428,23 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Airline: automatically display all buffers when only one tab is open
+let g:airline#extensions#tabline#enabled = 1
+
+" Airline: tail formatter
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+" Airline: Show Airline on top
+" let g:airline_statusline_ontop=1
+
+" Airline: theme
+let g:airline_theme='simple'
+
+" CLang Format: integration in Normal and Visual mode
+let g:clang_format#detect_style_file=1
+autocmd FileType c,cpp,objc nnoremap <buffer><C-K> :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><C-K> :ClangFormat<CR>
+
 " NERDTree: shortcut
 map <C-n> :NERDTreeToggle<cr>
 
@@ -457,34 +474,19 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
-" Airline: automatically display all buffers when only one tab is open
-let g:airline#extensions#tabline#enabled = 1
-
-" Airline: tail formatter
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
-" Airline: Show Airline on top
-let g:airline_statusline_ontop=1
-
-" Airline: theme
-let g:airline_theme='simple'
-
-" CLang Format: integration in Normal and Visual mode
-let g:clang_format#detect_style_file=1
-autocmd FileType c,cpp,objc nnoremap <buffer><C-K> :<C-u>ClangFormat<CR>
-autocmd FileType c,cpp,objc vnoremap <buffer><C-K> :ClangFormat<CR>
-
 " Tagbar: Toggle
 nmap <F8> :TagbarToggle<CR>
 
-" YouCompleteMe: Set global compile flags
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" Templates: C project name detection
+let g:templates_user_variables = [
+            \   ['CPROJNAME', 'GetCProjectName'],
+            \ ]
+function! GetCProjectName()
+    return system("grep 'NAME' makeinclude/project.mk | cut -d= -f2 | xargs | tr -d '\n'")
+endfunction
 
-" YouCompleteMe: Press C-b to jump to a definition/declaration/etc
-map <C-b> :YcmCompleter GoToImprecise<cr>
-
-" YouCompleteMe: Press <leader>f for a quick FixIt
-nmap <leader>f :YcmCompleter FixIt<cr>
+" Templates: My templates dir
+let g:templates_directory = ['~/.vim/my_templates']
 
 " Vim Goto Header: Press F12 at any time when on a header's include line to go to it
 nnoremap <F12> :GotoHeader <CR>
