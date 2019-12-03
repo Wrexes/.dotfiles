@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2019
-** <project name>
+** %CPROJNAME%
 ** File description:
 ** Main source
 */

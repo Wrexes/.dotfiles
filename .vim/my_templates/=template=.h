@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, %YEAR%
-** <project name>
+** %CPROJNAME%
 ** File description:
 ** %FFILE% -- No description
 */

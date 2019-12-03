@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2019
-** <project name> unit tests
+** %CPROJNAME% unit tests
 ** File description:
 ** %FFILE% -- No description
 */
