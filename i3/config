@@ -215,6 +215,8 @@
     exec --no-startup-id birdtray
     # Volume tray icon
     exec --no-startup-id volumeicon
+    # Auto hide mouse after 3 secondes
+    exec --no-startup-id hhpc -i 3
 
 # App shortcuts
     # start a terminal

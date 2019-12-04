@@ -182,11 +182,12 @@ else
     " Disable text having a different BG than empty lines
     hi Normal ctermbg=0
     hi LineNr ctermfg=DarkGrey
+    hi! link SignColumn Normal
 endif
 
 " Higlight characters that exceed a 80 columns limit
 " In C/C++ projects
-autocmd BufEnter *.c,*.cpp,*.h,*.hpp
+autocmd BufEnter,FileType *.c,*.cpp,*.h,*.hpp
             \ highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9 |
             \ match OverLength /\%>79v.\+/
 
@@ -431,6 +432,9 @@ endfunction
 " Airline: automatically display all buffers when only one tab is open
 let g:airline#extensions#tabline#enabled = 1
 
+" Airline: Show Gutentags' status
+let g:airline#extensions#gutentags#enabled = 1
+
 " Airline: tail formatter
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
@@ -474,16 +478,22 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
+" Gutentags: Status bar
+set statusline+=%{gutentags#statusline()}
+
 " Tagbar: Toggle
 nmap <F8> :TagbarToggle<CR>
 
 " Templates: C project name detection
+function! GetCProjectName()
+    return system("make -np NOLIBFOX=1 2>/dev/null | grep -E '^NAME' | tail -n1 | cut -d ' '  -f3 | tr -d '\n'")
+endfunction
 let g:templates_user_variables = [
             \   ['CPROJNAME', 'GetCProjectName'],
             \ ]
-function! GetCProjectName()
-    return system("grep 'NAME' makeinclude/project.mk | cut -d= -f2 | xargs | tr -d '\n'")
-endfunction
+
+" Switch Buffer: Just a keymap
+nnoremap S :SwitchBuffer <cr>
 
 " Templates: My templates dir
 let g:templates_directory = ['~/.vim/my_templates']

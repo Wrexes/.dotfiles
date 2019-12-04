@@ -16,4 +16,5 @@ function update-all --description 'Update everything with a single command.'
     fisher self-update
     fisher
     echo; echo;
+    rfish
 end

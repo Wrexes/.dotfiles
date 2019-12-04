@@ -10,5 +10,6 @@
     "suggest.noselect": false,
     "coc.source.buffer.enable" : true,
     "coc.source.around.enable" : true,
-    "coc.source.file.enable" : true
+    "coc.source.file.enable" : true,
+    "codeLens.enable":  true
 }

@@ -11,7 +11,7 @@
     fish_default_key_bindings
 
 # Make Alt+L Print a git pretty-log
-    bind \el 'echo; git plog'
+    bind \el 'git plog; echo; commandline -f repaint'
 
 
 
