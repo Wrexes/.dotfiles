@@ -37,3 +37,6 @@
 [submodule "clang-format"]
 	path = clang-format
 	url = git@github.com:fox-tek/.clang-format.git
+[submodule "gdb-dashboard"]
+	path = gdb-dashboard
+	url = https://github.com/cyrus-and/gdb-dashboard.git
