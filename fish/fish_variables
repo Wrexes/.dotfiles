@@ -4,7 +4,7 @@ SETUVAR --export ACADEMIC_YEAR:2019
 SETUVAR --export BAT_THEME:Sublime\x20Snazzy
 SETUVAR --export CFGDIR:/home/renard/\x2econfig
 SETUVAR --export DOTDIR:/home/renard/dotfiles
-SETUVAR --export EDITOR:/sbin/vi
+SETUVAR --export EDITOR:nvim
 SETUVAR --export FILEMANAGER:\x1d
 SETUVAR --export MANPAGER:sh\x20\x2dc\x20\x27col\x20\x2dbx\x20\x7c\x20bat\x20\x2dl\x20man\x20\x2dp\x27
 SETUVAR --export PRISMA_MANAGEMENT_API_SECRET:megasaucisse42\x3f
