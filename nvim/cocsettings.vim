@@ -128,4 +128,4 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>n
 
 " Color settings
-autocmd BufEnter hi! link CocErrorFloat ErrorMsg
+hi link CocErrorFloat ErrorMsg
