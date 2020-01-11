@@ -1,0 +1,79 @@
+# Dharma GRUB2 theme version 1.0.
+#
+# Designed by Malcer <malcer [at] gmx [dot] com> <malcer.deviantart.com> for Chakra Project <http://www.chakra-project.org/>
+#
+# Some rights reserved. This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License. | 2012
+#
+# All operating system logos (except "os" and "unknown") are modifications of original trademarks. All rights for each project/company.
+# "drive" icon was made under Oxygen-KDE drive icon by Oxygen Team, modifications by Malcer.
+# ---- END ORIGINAL THEME ----
+
+# Slightly modified by intelfx <intelfx100@gmail.com>
+# Original license(s) apply.
+# Terminus font is used, licensed as SIL Open Font License 1.1.
+
+# General
+
+title-text: "Boot menu"
+title-font: "Terminus Bold 18"
+title-color: "#f08000"
+message-font: "Terminus Regular 14"
+message-color: "#FFFFFF"
+message-bg-color: "#f6f6f6"
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-font: "Terminus Regular 12"
+
+# OS list
+
++ boot_menu {
+		left = 15%
+		width = 70%
+		top = 29%
+		height = 42%
+		item_font = "Terminus Regular 12"
+		selected_item_font = "Terminus Bold 12"
+		item_color = "#c3c3c3"
+		selected_item_color = "#000000"
+		item_height = 48
+		item_padding = 15
+		item_spacing = 5
+		icon_width = 48
+		icon_height = 48
+		item_icon_space = 20
+		selected_item_pixmap_style= "select_bkg_*.png"
+		menu_pixmap_style = ""
+		scrollbar = true
+		scrollbar_width = 24
+		scrollbar_thumb = ""
+		scrollbar_frame = ""
+}
+
+# Time progress Bar
+
++ progress_bar {
+		id = "__timeout__"
+		left = 40%
+		width = 170
+		top = 73%
+		height = 23
+		show_text = false
+		font = "Terminus Regular 10"
+		text_color = "#c3c3c3"
+		text = ""
+		bar_style = "progress_bar_*.png"
+		highlight_style = "progress_highlight_*.png"
+}
+
+# GRUB Options
+
++ hbox {
+		top = 100%-35
+		left = 20%
+		+ label {text = "Enter: " font = "Terminus Bold 12" color = "#c3c3c3" align = "left"}
+		+ label {text = "Boot Selection     " font = "Terminus Regular 12" color = "#1692d0" align = "left"}
+		+ label {text = "E: " font = "Terminus Bold 12" color = "#c3c3c3" align = "left"}
+		+ label {text = "Edit Selection     " font = "Terminus Regular 12" color = "#1692d0" align = "left"}
+		+ label {text = "C: " font = "Terminus Bold 12" color = "#c3c3c3" align = "left"}
+		+ label {text = "GRUB Commandline" font = "Terminus Regular 12" color = "#1692d0" align = "left"}
+}
