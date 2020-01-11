@@ -28,3 +28,6 @@ ln -s $CWD/omf              $HOME/.config/
 ln -s $CWD/rofi             $HOME/.config/
 ln -s $CWD/starship.toml    $HOME/.config/
 ln -s $CWD/yay              $HOME/.config/
+
+LYCFGD="/etc/ly/"
+mkdir -p $LYCFGD && ln -s $CWD/ly/config.ini $LYCFGD/
