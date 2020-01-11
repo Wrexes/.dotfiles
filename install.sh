@@ -18,6 +18,7 @@ ln -s $CWD/clang-format/.clang-format   $HOME/
 ln -s $CWD/gdb-dashboard/.gdbinit       $HOME/
 
 mkdir -p "$HOME/.config" "$HOME/.local"
+ln -s $CWD/TabNine          $HOME/.config/
 ln -s $CWD/fish             $HOME/.config/
 ln -s $CWD/i3               $HOME/.config/
 ln -s $CWD/kitty            $HOME/.config/
