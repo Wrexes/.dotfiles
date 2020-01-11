@@ -19,6 +19,7 @@ ln -s $CWD/gdb-dashboard/.gdbinit       $HOME/
 
 mkdir -p "$HOME/.config" "$HOME/.local"
 ln -s $CWD/TabNine          $HOME/.config/
+ln -s $CWD/dunst            $HOME/.config/
 ln -s $CWD/fish             $HOME/.config/
 ln -s $CWD/i3               $HOME/.config/
 ln -s $CWD/kitty            $HOME/.config/
