@@ -185,11 +185,12 @@ else
     hi! link SignColumn Normal
 endif
 
-" Higlight characters that exceed a 80 columns limit
-" In C/C++ projects
-autocmd BufEnter,FileType *.c,*.cpp,*.h,*.hpp
-            \ highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9 |
-            \ match OverLength /\%>79v.\+/
+" Higlight characters that exceed a certain columns limit
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+" C/C++:
+autocmd BufEnter,FileType *.c,*.cpp,*.h,*.hpp match OverLength /\%>79v.\+/
+" Makefiles
+autocmd BufEnter,FileType Makefile,makefile,*.mk,*.mak match OverLength /\%>124v.\+/
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -248,9 +249,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Close the current buffer
-map <C-W>w :Bclose<cr>
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+" Close current buffer
+map <C-W>b :Bclose<cr>
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
@@ -457,7 +457,7 @@ map <C-n> :NERDTreeToggle<cr>
 
 " NERDTree: Open NerdTree when opening a directory
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | wincmd h | exe 'cd '.argv()[0] | endif
 
 " NERDTree: File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
