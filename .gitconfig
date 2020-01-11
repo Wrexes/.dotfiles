@@ -2,30 +2,47 @@
     pretty-log = !git --no-pager log \
         --color --graph --abbrev-commit --decorate=auto \
         --pretty=format:"'%w(72,2,5)%C(ul #f08000)%h%C(noul):%Creset %C(bold)%s%Creset%n%C(#f08000)└%C(dim #f08000)%an, %cr%+gD%Creset'" \
+        | bat --style=grid
+    short-pretty-log = !git --no-pager log \
+        --color --abbrev-commit --decorate=auto \
+        --pretty=format:"'%w(72,2,5)%C(ul #f08000)%h%C(noul):%Creset %C(bold)%s%Creset'" \
         | bat --style=grid,numbers
+
     plog = !git pretty-log
+    splog = !git short-pretty-log
+
+    commits = !git plog | grep -E '^\\*' | wc -l
+
 [user]
 	email = ludovic.fernandez@epitech.eu
 	name = Renard
 	github = fox-tek
+
 [core]
 	excludesfile = /home/renard/repos/delivery/epitech-gitignore
 	pager = diff-so-fancy | bat --style=numbers,grid,snip
+
 [merge]
 	tool = vimdiff
+
 [mergetool]
 	keepBackup = false
+
 [mergetool "vimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
 [diff-so-fancy]
 	rulerWidth = 47
+
 [color]
 	ui = true
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+
 [color "diff"]
 	meta = blue bold
 	frag = blue dim
