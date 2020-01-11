@@ -12,7 +12,6 @@ Plug 'Yohannfra/Nvim-Switch-Buffer'
 Plug 'Yohannfra/Vim-Goto-Header'
 Plug 'aperezdc/vim-template'
 Plug 'brooth/far.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'nanotech/jellybeans.vim'
@@ -25,6 +24,7 @@ if has ('nvim')
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 else
     Plug 'ycm-core/YouCompleteMe', {'do': './install.py --all --clangd-completer'}
+    Plug 'jiangmiao/auto-pairs'
 endif
 
 " End plugin list
