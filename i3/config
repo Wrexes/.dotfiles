@@ -182,8 +182,10 @@
 
 # Windows settings
     # Tiled pop-ups are annoying
+    no_focus [window_role="pop-up"]
     for_window [window_role="pop-up"] floating enable
     for_window [class="kitty" title="alsamixer"] floating enable
+    for_window [class="Pdf2png"] floating enable
     # for_window [class="kitty" title="nmtui"] floating enable
     # JetBrains Toolbox
     for_window [class="jetbrains-toolbox"] floating enable
@@ -216,17 +218,21 @@
     # Volume tray icon
     exec --no-startup-id volumeicon
     # Auto hide mouse after 3 secondes
-    exec --no-startup-id hhpc -i 3
+    exec --no-startup-id mousetrap -t 3
+    # Blue light filter
+    exec --no-startup-id blugon -f
 
 # App shortcuts
+    # Update everything
+    bindsym $mod+Shift+u exec i3-sensible-terminal --title='General update script' fish '-c update-all'
     # start a terminal
     bindsym $mod+Return exec i3-sensible-terminal
     # Rofi (scripts are in ~/.local/bin)
+        # App launcher
+        bindsym $mod+Ctrl+Return exec drofi
         # Window cycler
         bindsym $mod+Tab exec drofi-wc
-        # App launcher
-        bindsym $mod+Shift+Return exec drofi
-        # Known networks
-        bindsym $mod+Ctrl+Return exec networkmanager_dmenu
     # Screenshot tool
     bindsym Print exec flameshot gui
+    # Open web browser
+    bindsym $mod+Ctrl+v exec vivaldi-stable
