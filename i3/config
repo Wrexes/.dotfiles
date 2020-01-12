@@ -167,10 +167,10 @@
     bindsym $mod+l exec --no-startup-id lock
 
 # Use ponymix to adjust volume in Alsa.
-    bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 2
-    bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 2
-    bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id ponymix increase 10
-    bindsym Shift+XF86AudioLowerVolume exec --no-startup-id ponymix decrease 10
+    bindsym XF86AudioRaiseVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix increase 2)
+    bindsym XF86AudioLowerVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix decrease 2)
+    bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix increase 10)
+    bindsym Shift+XF86AudioLowerVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix decrease 10)
     bindsym XF86AudioMute exec --no-startup-id ponymix toggle
 
 # Use brightnessctl to adjust laptop's backlight
