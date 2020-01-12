@@ -171,7 +171,7 @@
     bindsym XF86AudioLowerVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix decrease 2)
     bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix increase 10)
     bindsym Shift+XF86AudioLowerVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix decrease 10)
-    bindsym XF86AudioMute exec --no-startup-id ponymix toggle
+    bindsym XF86AudioMute exec --no-startup-id ponymix toggle && dunstify -a Volume -t 1000 -u low $(ponymix is-muted && echo "Muted" || echo "Unmuted")
 
 # Use brightnessctl to adjust laptop's backlight
     bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 5%+
