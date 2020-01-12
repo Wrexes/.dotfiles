@@ -219,8 +219,6 @@
     exec --no-startup-id volumeicon
     # Auto hide mouse after 3 secondes
     exec --no-startup-id mousetrap -t 3
-    # Blue light filter
-    exec --no-startup-id blugon -f
 
 # App shortcuts
     # Update everything
