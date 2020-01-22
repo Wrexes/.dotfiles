@@ -15,5 +15,5 @@
 
 
 
-# For setting $PATH, check <fish_conf_dir>/conf.d/userpath.fish
-# For other environment variables, see <fish_conf_dir>/conf.d/userenv.fish
+# For setting $PATH, check <fish_conf_dir>/conf.d/path.fish
+# For other environment variables, see <fish_conf_dir>/conf.d/env.fish
