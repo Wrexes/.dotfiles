@@ -20,7 +20,7 @@
 	github = fox-tek
 
 [core]
-	excludesfile = /home/renard/repos/delivery/epitech-gitignore
+	excludesfile = /home/renard/.dotfiles/.gitignore
 	pager = diff-so-fancy | bat --style=numbers,grid,snip
 
 [merge]
