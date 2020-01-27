@@ -11,7 +11,8 @@
     plog = !git pretty-log
     splog = !git short-pretty-log
 
-    commits = !git plog | grep -E '^\\*' | wc -l
+    commit-count = !git plog | grep -E '^\\*' | wc -l
+    cc = !git commit-count
 
 [user]
 	email = ludovic.fernandez@epitech.eu
