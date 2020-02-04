@@ -192,6 +192,8 @@ autocmd BufEnter,FileType *.c,*.cpp,*.h,*.hpp match OverLength /\%>79v.\+/
 " Makefiles
 autocmd BufEnter,FileType Makefile,makefile,*.mk,*.mak match OverLength /\%>124v.\+/
 
+" Enable .rasi syntax hylighting
+au BufNewFile,BufRead /*.rasi setf css
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -433,7 +435,7 @@ endfunction
 let g:airline#extensions#tabline#enabled = 1
 
 " Airline: Show Gutentags' status
-let g:airline#extensions#gutentags#enabled = 1
+" let g:airline#extensions#gutentags#enabled = 1
 
 " Airline: tail formatter
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
@@ -479,14 +481,14 @@ call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 " Gutentags: Status bar
-set statusline+=%{gutentags#statusline()}
+" set statusline+=%{gutentags#statusline()}
 
 " Tagbar: Toggle
 nmap <F8> :TagbarToggle<CR>
 
 " Templates: C project name detection
 function! GetCProjectName()
-    return system("make -np NOLIBFOX=1 2>/dev/null | grep -E '^NAME' | tail -n1 | cut -d ' '  -f3 | tr -d '\n'")
+     return system("pwd | grep -q libfox && echo -n 'Libfox' || make -np NOLIBFOX=1 2>/dev/null | grep -E '^NAME' | tail -n1 | cut -d ' '  -f3 | tr -d '\n'")
 endfunction
 let g:templates_user_variables = [
             \   ['CPROJNAME', 'GetCProjectName'],

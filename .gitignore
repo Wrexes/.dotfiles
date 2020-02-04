@@ -75,8 +75,11 @@ cmake*
 .idea
 
 # Compile DB and other Makefile generated stuff
+tags
 compile_commands.json
+.foxconfig
 .progbar
+.clangd/
 
 # Epitech project binaries
 utest_*

@@ -12,7 +12,7 @@ Plug 'Yohannfra/Nvim-Switch-Buffer'
 Plug 'Yohannfra/Vim-Goto-Header'
 Plug 'aperezdc/vim-template'
 Plug 'brooth/far.vim'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'nanotech/jellybeans.vim'
 Plug 'rhysd/vim-clang-format'
@@ -20,10 +20,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Gummybears'
+Plug 'idanarye/vim-vebugger'
 if has ('nvim')
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 else
     Plug 'ycm-core/YouCompleteMe', {'do': './install.py --all --clangd-completer'}
+    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'jiangmiao/auto-pairs'
 endif
 

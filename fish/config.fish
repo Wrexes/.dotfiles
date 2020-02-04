@@ -1,6 +1,7 @@
 # Autostart
     # Starship prompt
-    eval (starship init fish)
+    #eval (starship init fish)
+    starship init fish | source
     # The Fuck
     thefuck --alias | source
 

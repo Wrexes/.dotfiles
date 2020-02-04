@@ -4,18 +4,14 @@ function mr_clean --description 'Mieux que Sanytol.'
         set mr_clean_temp (pwd)
         for i in (seq (count $argv))
             cd $argv[$i]
-            and figlet -tf digital Cleaning $argv[$i]
-            if [ -e $argv[$i]/Makefile ]
-                echo "Found a Makefile, cleaning up."
-                make clean
-            end
+            echo [Mr Clean] Entering $argv[$i]...
+            [ -e $argv[$i]/Makefile ] && make clean
             rmtemps
-            cd $mr_clean_temp
+            echo [Mr Clean] Exiting $argv[$i].
         end
+        cd $mr_clean_temp
     else
-        if [ -e Makefile ]
-            make clean
-        end
+        [ -e Makefile ] && make clean
         rmtemps
     end
     figlet -c -f small "Sa magie c'est sa puissance !"

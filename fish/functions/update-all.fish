@@ -12,9 +12,9 @@ function update-all --description 'Update everything with a single command.'
     nvim +PlugUpdate +CocUpdate +qa
     figlet -tf small "Done."
 
-    figlet -tf slant "Oh My Fish !"
-    omf update
-    echo; echo;
+#    figlet -tf slant "Oh My Fish !"
+#    omf update
+#    echo; echo;
 
     figlet -tf slant "Fisher"
     fisher self-update

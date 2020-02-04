@@ -17,6 +17,7 @@ function rmtemps --description 'Remove temp files recursively'
             -o -name ".gdb_history" \
             -o -name ".nvimlog"     \
             -o -name "a.out"        \
+            -o -name "tags"         \
             -o -name "vgcore.*"     \
         \)                          \
         -print                      \
