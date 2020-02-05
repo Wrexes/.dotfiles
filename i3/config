@@ -65,7 +65,7 @@
 #    }
 bar {
     status_command goblocks
-    font pango:fira-mono 11
+    font pango:fira-mono 12
     position          bottom
     mode              dock
     workspace_buttons yes
@@ -281,23 +281,26 @@ bar {
 
 
 # Autostart
-    # Start a terminal
-    exec --no-startup-id i3-sensible-terminal
-
-    # Mail client
-    exec --no-startup-id claws-mail
-
-    # Disk automounter
-    exec --no-startup-id udiskie -s
-
     # Numlock ON at startup
     exec --no-startup-id numlockx on
+
+    # Notification daemon
+    exec --no-startup-id dunst
 
     # Screen locker
     exec --no-startup-id xss-lock --transfer-sleep-lock -- fish -c lock
 
+    # Disk automounter
+    exec --no-startup-id udiskie -s
+
+    # Mail client
+    exec --no-startup-id claws-mail
+
     # Auto hide mouse after 3 seconds
     exec --no-startup-id mousetrap -t 3
+
+    # Start a terminal
+    exec --no-startup-id i3-sensible-terminal
 
 
 
