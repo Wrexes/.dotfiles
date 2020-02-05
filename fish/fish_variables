@@ -71,33 +71,6 @@ SETUVAR --export cdir_nvim:/home/renard/\x2econfig/nvim
 SETUVAR --export cdir_rofi:/home/renard/\x2econfig/rofi
 SETUVAR --export cdir_vim:/home/renard/\x2evim
 SETUVAR --export cdir_yay:/home/renard/\x2econfig/yay
-SETUVAR --export cfg_ENV:/home/renard/\x2econfig/fish/conf\x2ed/userenv\x2efish
-SETUVAR --export --path cfg_PATH:/home/renard/\x2econfig/fish/conf\x2ed/userpath\x2efish
-SETUVAR --export cfg_clgfrmt:/home/renard/dotfiles/clang\x2dformat/\x2eclang\x2dformat
-SETUVAR --export cfg_dunst:/home/renard/\x2econfig/dunst/dunstrc
-SETUVAR --export cfg_fish:/home/renard/\x2econfig/fish/config\x2efish
-SETUVAR --export cfg_gdb:/home/renard/\x2econfig/gdb/gef\x2epy
-SETUVAR --export cfg_gdbdash:/home/renard/dotfiles/gdb\x2ddashboard/\x2egdbinit
-SETUVAR --export cfg_gef:/home/renard/\x2econfig/gdb/gef/gef\x2epy
-SETUVAR --export cfg_i3:/home/renard/\x2econfig/i3/config
-SETUVAR --export cfg_kitty:/home/renard/\x2econfig/kitty/kitty\x2econf
-SETUVAR --export cfg_ly:/etc/ly/config\x2eini
-SETUVAR --export cfg_nmd:/home/renard/\x2econfig/networkmanager\x2ddmenu/config\x2eini
-SETUVAR --export cfg_rofi:/home/renard/\x2econfig/rofi/config\x2erasi
-SETUVAR --export cfg_starship:/home/renard/\x2econfig/starship\x2etoml
-SETUVAR --export cfg_vim:/home/renard/dotfiles/\x2evimrc
-SETUVAR --export cfgd_X:/home/renard/\x2econfig/X11
-SETUVAR --export cfgd_clgfrmt:/home/renard/dotfiles/clang\x2dformat
-SETUVAR --export cfgd_dunst:/home/renard/\x2econfig/dunst
-SETUVAR --export cfgd_fish:/home/renard/\x2econfig/fish
-SETUVAR --export cfgd_gdb:/home/renard/dotfiles/\x2egdbinit\x2ed
-SETUVAR --export cfgd_gdbdash:/home/renard/dotfiles/gdb\x2ddashboard
-SETUVAR --export cfgd_i3:/home/renard/\x2econfig/i3
-SETUVAR --export cfgd_kitty:/home/renard/\x2econfig/kitty
-SETUVAR --export cfgd_ly:/etc/ly
-SETUVAR --export cfgd_nmd:/home/renard/\x2econfig/networkmanager\x2ddmenu
-SETUVAR --export cfgd_rofi:/home/renard/\x2econfig/rofi
-SETUVAR --export cfgd_vim:/home/renard/dotfiles/\x2evim
 SETUVAR --export conf_dunst:/home/renard/\x2econfig/dunst/dunstrc
 SETUVAR --export conf_fish:/home/renard/\x2econfig/fish/config\x2efish
 SETUVAR --export conf_format:/home/renard/\x2eclang\x2dformat
@@ -137,7 +110,7 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR --export fish_user_paths:/home/renard/\x2elocal/bin\x1e/home/renard/\x2elocal/scripts
+SETUVAR --export fish_user_paths:\x1d
 SETUVAR --export lfox:/home/renard/repos/libs/libfox
 SETUVAR --export libs:/home/renard/repos/libs
 SETUVAR --export mkrepo:/home/renard/repos/delivery/makefiles
