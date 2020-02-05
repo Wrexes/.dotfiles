@@ -23,6 +23,7 @@ SETUVAR _fish_abbr_clone:git\x20clone
 SETUVAR _fish_abbr_cov:gcovr\x20\x2ds\x20\x2d\x2dexclude\x20tests\x20\x2d\x2dexclude\x2dunreachable\x2dbranches
 SETUVAR _fish_abbr_cpat:cp\x20\x2dat
 SETUVAR _fish_abbr_deliv:cd\x20/home/renard/repos/delivery
+SETUVAR _fish_abbr_diffs:diffoscope\x20\x2d\x2dexclude\x2ddirectory\x2dmetadata
 SETUVAR _fish_abbr_editenv:\x24EDITOR\x20\x24cdir_fish/conf\x2ed/env\x2efish
 SETUVAR _fish_abbr_expand:gcc\x20\x2dE\x20\x2a\x2a\x2e\x7bh\x2cc\x7d\x20\x2diquote\x20objects\x20\x2diquote\x20\x2e\x2e/extra/include/\x20\x2diquote\x20include/
 SETUVAR _fish_abbr_fetch:git\x20fetch\x20\x2d\x2dall
