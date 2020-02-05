@@ -40,6 +40,3 @@
 [submodule "gdb-dashboard"]
 	path = gdb-dashboard
 	url = https://github.com/cyrus-and/gdb-dashboard.git
-[submodule "grub2/grub2-theme-dharma-mod"]
-	path = grub2/grub2-theme-dharma-mod
-	url = https://aur.archlinux.org/grub2-theme-dharma-mod.git
