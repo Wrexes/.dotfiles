@@ -13,7 +13,7 @@
 ##########
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-    font pango:fira-mono 10.5
+    font pango:fira-mono 13
 
 
 
@@ -65,7 +65,7 @@
 #    }
 bar {
     status_command goblocks
-    font pango:fira-mono 12
+    font pango:fira-mono 13
     position          bottom
     mode              dock
     workspace_buttons yes
