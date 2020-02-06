@@ -76,7 +76,7 @@ addenv lfox $libs/libfox
 addenv mkrepo $deliv/makefiles
 
 # Global gitignore
-addenv tekgi $DOTDIR/.gitignore
+addenv tekgi $DOTDIR/tekgi
 
 ########################################
 ##         CONFIG SETTINGS            ##
