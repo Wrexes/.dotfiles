@@ -488,7 +488,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " Templates: C project name detection
 function! GetCProjectName()
-     return system("pwd | grep -q libfox && echo -n 'Libfox' || make -np NOLIBFOX=1 2>/dev/null | grep -E '^NAME' | tail -n1 | cut -d ' '  -f3 | tr -d '\n'")
+     return system("pwd | grep -q libfox && echo -n 'Libfox' || make -np NOLIBFOX=1 2>/dev/null | grep -E '^NAME' | perl -pe 's/(( |\t)*NAME( |\t)*[:+?]?=( |\t)*|(\n|\r)*)//g'")
 endfunction
 let g:templates_user_variables = [
             \   ['CPROJNAME', 'GetCProjectName'],
