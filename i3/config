@@ -81,7 +81,7 @@ bar {
     colors {
         background #000000
         statusline #f08000
-        focused_workspace  #f08000 #333333
+        focused_workspace  #a0a0a0 #333333 #f08000
         active_workspace   #000000 #000000
         inactive_workspace #a0a0a0 #000000
         urgent_workspace   #000000 #f08000
