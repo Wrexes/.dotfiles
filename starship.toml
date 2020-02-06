@@ -11,7 +11,7 @@ style = "bold fg:#c40f4b"
 style = "bold fg:#b50000"
 ahead = "⇧"
 behind = "⇩"
-modified = "‽"
+modified = "!"
 staged_count.enabled = true
 staged_count.style = "fg:#f08000"
 
