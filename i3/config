@@ -305,6 +305,9 @@ bar {
     # Mail client
     exec --no-startup-id claws-mail
 
+    # Screenshot tool
+    exec --no-startup-id flameshot
+
     # Auto hide mouse after 3 seconds
     exec --no-startup-id mousetrap -t 3
 
