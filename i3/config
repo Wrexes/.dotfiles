@@ -73,18 +73,18 @@
 #    }
 bar {
     status_command goblocks
-    font pango:Fira Mono, Twitter Color Emoji, 12
+    font pango:Fira Mono Medium, 12
     position          bottom
     mode              dock
     workspace_buttons yes
     tray_output       primary
     colors {
         background #000000
-        statusline #999999
-        focused_workspace  #000000 #f08000
-        active_workspace   #ffffff #333333
-        inactive_workspace #ffffff #222222
-        urgent_workspace   #ffffff #ff1a00
+        statusline #f08000
+        focused_workspace  #f08000 #333333
+        active_workspace   #000000 #000000
+        inactive_workspace #a0a0a0 #000000
+        urgent_workspace   #000000 #f08000
     }
 }
 
