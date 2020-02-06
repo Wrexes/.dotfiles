@@ -13,14 +13,13 @@
 ##########
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-    font pango:fira-mono 13
+    font pango:Fira Mono 11
 
 
 
 # Default window style
     default_border pixel 1
-    default_floating_border pixel 3
-    hide_edge_borders both
+    default_floating_border pixel 4
 
 
 
@@ -40,6 +39,15 @@
     set_from_resource $darkcyan i3wm.color6 #87ceeb
     set_from_resource $cyan i3wm.color14 #87ceeb
     set_from_resource $lightgrey i3wm.color7 #ffffff
+
+    # class                 border  backgr. text    indicator child_border
+    client.focused          #333333 #333333 #f08000 #333333   #333333
+    client.focused_inactive #000000 #333333 #ffffff #f08000   #000000
+    client.unfocused        #000000 #111111 #a0a0a0 #292d2e   #000000
+#    client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#    client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+    client.background       #333333
 
 
 
@@ -65,7 +73,7 @@
 #    }
 bar {
     status_command goblocks
-    font pango:fira-mono 13
+    font pango:Fira Mono, Twitter Color Emoji, 12
     position          bottom
     mode              dock
     workspace_buttons yes
@@ -203,16 +211,17 @@ bar {
 
 
 # Create Log out, Reboot, Poweroff bindings
-    mode "Exit (L)ogout, (R)eboot, (P)oweroff" {
-            bindsym $mod+r exec systemctl reboot
-            bindsym $mod+l exit
-            bindsym $mod+p exec systemctl poweroff
+    set $PAmode "Power actions: [Mod] + [L]ogout, [R]eboot, [P]oweroff"
+    mode $PAmode {
+            bindsym $mod+l exec i3-msg exit, mode "default"
+            bindsym $mod+r exec systemctl reboot, mode "default"
+            bindsym $mod+p exec systemctl poweroff, mode "default"
 
             # back to normal: Enter or Escape
             bindsym Return mode "default"
             bindsym Escape mode "default"
     }
-    bindsym $mod+Shift+e mode "Exit (L)ogout, (R)eboot, (P)oweroff"
+    bindsym $mod+Shift+e mode $PAmode
 
 
 
@@ -301,6 +310,9 @@ bar {
 
     # Start a terminal
     exec --no-startup-id i3-sensible-terminal
+
+    # Blue light fliter
+    exec --no-startup-id redshift -l geoclue2
 
 
 
