@@ -4,9 +4,8 @@ function addenv --description "Add/Edit an environment variable"
 
     if ! set -q $key
         set -Ux $key $val
-    else
-        [ $$key != "$val" ]
-        and set -e $key
+    else if [ "$$key" != "$val" ]
+        set -e $key
         and addenv $key $val
     end
 end
@@ -36,6 +35,7 @@ end
 ########################################
 ##         MAIN CONFIG DIRS           ##
 ########################################
+addenv XDG_USER_CONFIG_DIR $HOME/.config
 addenv CFGDIR $XDG_USER_CONFIG_DIR
 addenv DOTDIR $HOME/.dotfiles
 
