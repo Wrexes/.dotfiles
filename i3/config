@@ -44,7 +44,7 @@
     client.focused          #333333 #333333 #f08000 #333333   #333333
     client.focused_inactive #000000 #333333 #ffffff #f08000   #000000
     client.unfocused        #000000 #111111 #a0a0a0 #292d2e   #000000
-#    client.urgent           #2f343a #900000 #ffffff #900000   #900000
+    client.urgent           #000000 #f08000 #000000 #900000   #900000
 #    client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
     client.background       #333333
