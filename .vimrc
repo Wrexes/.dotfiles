@@ -311,10 +311,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h
 map 0 ^
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nmap <M-Up> mz:m-2<cr>`z
+nmap <M-Down> mz:m+<cr>`z
+vmap <M-Up> :m'<-2<cr>`>my`<mzgv`yo`z
+vmap <M-Down> :m'>+<cr>`<my`>mzgv`yo`z
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
@@ -488,7 +488,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " Templates: C project name detection
 function! GetCProjectName()
-     return system("pwd | grep -q libfox && echo -n 'Libfox' || make -np NOLIBFOX=1 2>/dev/null | grep -E '^NAME' | perl -pe 's/(( |\t)*NAME( |\t)*[:+?]?=( |\t)*|(\n|\r)*)//g'")
+     return system("pwd | grep -q libfox && echo -n 'Libfox' || make -np NOLIBFOX=1 2>/dev/null | grep -E '^NAME' | perl -pe 's/(( |\t)*NAME( |\t)*[:+?]?=( |\t)*|(\n|\r)*)//g' 2>/dev/null")
 endfunction
 let g:templates_user_variables = [
             \   ['CPROJNAME', 'GetCProjectName'],
