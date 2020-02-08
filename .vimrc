@@ -336,6 +336,8 @@ if has("autocmd")
     autocmd BufWritePre * :call CleanExtraSpaces()
 endif
 
+" Sort selection
+vmap <M-s> :sort<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
