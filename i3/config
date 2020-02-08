@@ -231,11 +231,11 @@ bar {
 
 
 # Use ponymix to adjust volume in Alsa.
-    bindsym XF86AudioRaiseVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix increase 2)
-    bindsym XF86AudioLowerVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix decrease 2)
-    bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix increase 10)
-    bindsym Shift+XF86AudioLowerVolume exec --no-startup-id dunstify -a Volume -t 1000 -u low $(ponymix decrease 10)
-    bindsym XF86AudioMute exec --no-startup-id ponymix toggle && dunstify -a Volume -t 1000 -u low $(ponymix is-muted && echo "Muted" || echo "Unmuted")
+    bindsym XF86AudioRaiseVolume exec --no-startup-id chvol inc 2
+    bindsym XF86AudioLowerVolume exec --no-startup-id chvol dec 2
+    bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id chvol inc 10
+    bindsym Shift+XF86AudioLowerVolume exec --no-startup-id chvol dec 10
+    bindsym XF86AudioMute exec --no-startup-id chvol toggle
 
 
 

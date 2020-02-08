@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Set the volume
+ponymix --max-volume 150 $@ >/dev/null
+
+# Get the current volume setting
+volume=$(ponymix get-volume | tr -d '\n')
+muted=$(ponymix is-muted && echo 1 || echo 0)
+
+# Setup the notification message appropriately
+if ( ponymix is-muted || [[ $volume == 0 ]] ); then
+    message=$(printf "🔇 %3i %%" $volume)
+else
+    message=$(printf "🔊 %3i %%" $volume)
+fi
+
+# Notifiy the user about the change
+dunstify -a "Volume control"    \
+    -u low                      \
+    -i volume-control           \
+    -r 32744                    \
+    "$message"
