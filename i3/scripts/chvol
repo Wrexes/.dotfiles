@@ -16,7 +16,7 @@ fi
 
 # Notifiy the user about the change
 dunstify -a "Volume control"    \
+    -t 1000                     \
     -u low                      \
-    -i volume-control           \
     -r 32744                    \
     "$message"
