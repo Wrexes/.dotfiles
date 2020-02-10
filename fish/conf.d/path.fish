@@ -12,4 +12,6 @@ end
 
 set -e  fish_user_paths
 set -Ux fish_user_paths
+
 addpath $HOME/.local/{bin, scripts}
+addpath $HOME/.config/i3/scripts
