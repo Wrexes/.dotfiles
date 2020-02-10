@@ -54,15 +54,23 @@
 # Define names for default workspaces for which we configure key bindings later on.
     # We use variables to avoid repeating the names in multiple places.
     set $ws1 "01-Home"
+
     set $ws2 "02-Web"
+    for_window [class="Vivaldi-stable"] move container to workspace $ws2
+
     set $ws3 "03"
     set $ws4 "04"
     set $ws5 "05"
     set $ws6 "06"
     set $ws7 "07"
     set $ws8 "08"
+
     set $ws9 "09-Mail"
+    for_window [class="Thunderbird"] move container to workspace $ws9
+
     set $ws10 "10-Chat"
+    for_window [class="Caprine"] move container to workspace $ws10
+    for_window [class="discord"] move container to workspace $ws10
 
 
 
@@ -253,6 +261,7 @@ bar {
     for_window [window_role="pop-up"] floating enable
 
     # System settings
+    for_window [class="Lxappearance"] floating enable
     for_window [class="Xinput-gui"] floating enable
     for_window [class="Nm-connection-editor"] floating enable
 
@@ -271,22 +280,10 @@ bar {
     # Flameshot settings
     for_window [class="flameshot"] floating enable
 
-    # Move chat clients to their respective workspace
-    for_window [class="Caprine"] move container to workspace $ws10
-    for_window [class="discord"] move container to workspace $ws10
-
     # CSFML projects
     for_window [title="Duck Hunt"] floating enable
 
     # Mail Client
-    for_window [class="Claws-mail"] move container to workspace $ws9
-    for_window [class="Claws-text-editor"] floating enable
-    for_window [class="Claws-text-viewer"] floating enable
-    for_window [class="compose"] floating enable
-    for_window [class="logwindow"] floating enable
-    for_window [window_role="messageview"] floating enable
-    for_window [window_role="message_search"] floating enable
-
 
 
 # Autostart
@@ -303,7 +300,7 @@ bar {
     exec --no-startup-id udiskie -s
 
     # Mail client
-    exec --no-startup-id claws-mail
+    exec --no-startup-id birdtray
 
     # Screenshot tool
     exec --no-startup-id flameshot
