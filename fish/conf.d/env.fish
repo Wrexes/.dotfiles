@@ -60,6 +60,9 @@ addenv fish_greeting "Today is a good day to code avec le cul !"
 # Bat theme
 addenv BAT_THEME "Sublime Snazzy"
 
+# Use bat as main man pager
+addenv MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
 # Academic year
 addenv ACADEMIC_YEAR 2019
 
