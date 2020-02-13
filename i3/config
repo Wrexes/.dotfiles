@@ -339,4 +339,4 @@ bar {
     bindsym $mod+Ctrl+c exec caprine, exec --no-startup-id i3-msg workspace $ws10
 
     # Mail Client
-    bindsym $mod+Ctrl+m exec claws-mail, exec --no-startup-id i3-msg workspace $ws9
+    bindsym $mod+Ctrl+m exec thunderbird, exec --no-startup-id i3-msg workspace $ws9
