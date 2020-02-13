@@ -51,6 +51,7 @@ debugmain.c
 vgcore*
 *.gcda
 *.gcno
+*.gcov
 
 # Kernel Module Compile Results
 *.mod*
