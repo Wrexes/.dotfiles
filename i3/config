@@ -248,10 +248,10 @@ bar {
 
 
 # Use brightnessctl to adjust laptop's backlight
-    bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 5%+
-    bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -q set 5%-
-    bindsym Shift+XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 20%+
-    bindsym Shift+XF86MonBrightnessDown exec --no-startup-id brightnessctl -q set 20%-
+    bindsym XF86MonBrightnessUp exec --no-startup-id chbrightness set 5%+
+    bindsym XF86MonBrightnessDown exec --no-startup-id chbrightness set 5%-
+    bindsym Shift+XF86MonBrightnessUp exec --no-startup-id chbrightness set 20%+
+    bindsym Shift+XF86MonBrightnessDown exec --no-startup-id chbrightness set 20%-
 
 
 
