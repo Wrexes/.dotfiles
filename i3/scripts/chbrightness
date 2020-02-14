@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Set the brightess and get the resulting state
+brightness=$(brightnessctl -m $@ | cut -d',' -f4 | tr -d '%')
+
+# Prep up the notification message
+message=$(printf "🔆 %3i %%" $brightness)
+
+# Notifiy the user about the change
+dunstify -a "Brightness control"    \
+    -t 1000                         \
+    -u low                          \
+    -r 17700                        \
+    "$message"
