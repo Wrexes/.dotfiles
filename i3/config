@@ -333,10 +333,13 @@ bar {
     bindsym Print exec flameshot gui
 
     # Web browser
-    bindsym $mod+Ctrl+v exec vivaldi-stable
+    bindsym $mod+Ctrl+v exec vivaldi-stable, exec --no-startup-id i3-msg workspace $ws2
 
     # Caprine (desktop Messenger)
     bindsym $mod+Ctrl+c exec caprine, exec --no-startup-id i3-msg workspace $ws10
+
+    # Discord
+    bindsym $mod+Ctrl+d exec discord, exec --no-startup-id i3-msg workspace $ws10
 
     # Mail Client
     bindsym $mod+Ctrl+m exec thunderbird, exec --no-startup-id i3-msg workspace $ws9
