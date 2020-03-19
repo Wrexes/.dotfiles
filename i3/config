@@ -264,6 +264,7 @@ bar {
     for_window [class="Lxappearance"] floating enable
     for_window [class="Xinput-gui"] floating enable
     for_window [class="Nm-connection-editor"] floating enable
+    for_window [class="System-config-printer.py"] floating enable
 
     # Utilities
     for_window [class="Pdf2png"] floating enable
@@ -282,6 +283,7 @@ bar {
 
     # CSFML projects
     for_window [title="Duck Hunt"] floating enable
+    for_window [title="My Defender"] floating enable
 
     # Mail Client
 
@@ -297,7 +299,7 @@ bar {
     exec --no-startup-id xss-lock --transfer-sleep-lock -- fish -c lock
 
     # Disk automounter
-    exec --no-startup-id udiskie -s
+    exec --no-startup-id udiskie -sa
 
     # Mail client
     exec --no-startup-id birdtray
@@ -312,7 +314,7 @@ bar {
     exec --no-startup-id i3-sensible-terminal
 
     # Blue light fliter
-    exec --no-startup-id redshift -l geoclue2
+    exec --no-startup-id fluxgui
 
 
 
