@@ -75,12 +75,15 @@ CMake*
 cmake*
 .idea
 
+# IDE generated stuff
+.vscode
+
 # Compile DB and other Makefile generated stuff
 tags
 compile_commands.json
 .foxconfig
 .progbar
-.clangd/
+.clangd
 
 # Epitech project binaries
 utest_*
