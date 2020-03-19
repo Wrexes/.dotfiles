@@ -11,8 +11,12 @@
 # Enable default mode
     fish_default_key_bindings
 
-# Make Alt+L Print a git pretty-log
+# Shortcuts
+# -- Git / Gitnow
+    # Alt+l : Print a git pretty-log
     bind \el 'git plog; echo; commandline -f repaint'
+    # Alt+s : Print a compact git status status
+    bind \es 'state; echo; commandline -f repaint'
 
 
 
