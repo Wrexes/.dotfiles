@@ -9,7 +9,6 @@ endif
 call plug#begin('$HOME/.vim/plugged')
 
 Plug 'Yohannfra/Nvim-Switch-Buffer'
-Plug 'Yohannfra/Vim-Goto-Header'
 Plug 'aperezdc/vim-template'
 Plug 'brooth/far.vim'
 Plug 'majutsushi/tagbar'
@@ -27,6 +26,7 @@ else
     Plug 'ycm-core/YouCompleteMe', {'do': './install.py --all --clangd-completer'}
     Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'jiangmiao/auto-pairs'
+    Plug 'Yohannfra/Vim-Goto-Header'
 endif
 
 " End plugin list

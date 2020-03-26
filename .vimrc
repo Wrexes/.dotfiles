@@ -503,5 +503,7 @@ nnoremap S :SwitchBuffer <cr>
 let g:templates_directory = ['~/.vim/my_templates']
 
 " Vim Goto Header: Press F12 at any time when on a header's include line to go to it
-nnoremap <F12> :GotoHeader <CR>
-imap <F12> <Esc>:GotoHeader <CR>
+if ! has('nvim')
+    nnoremap <F12> :GotoHeader <CR>
+    imap <F12> <Esc>:GotoHeader <CR>
+endif
