@@ -259,6 +259,12 @@ bar {
     # Tiled pop-ups are annoying
     no_focus [window_role="pop-up"]
     for_window [window_role="pop-up"] floating enable
+    # -- Microsoft Teams (notifications are windows)
+    no_focus [title="Microsoft Teams Notification"]
+    for_window [title="Microsoft Teams Notification"] floating enable
+    # -- Tixati (splash screen)
+    no_focus [title="Loading Tixati..."]
+    for_window [title="Loading Tixati..."] floating enable
 
     # System settings
     for_window [class="Lxappearance"] floating enable
@@ -284,8 +290,6 @@ bar {
     # CSFML projects
     for_window [title="Duck Hunt"] floating enable
     for_window [title="My Defender"] floating enable
-
-    # Mail Client
 
 
 # Autostart
