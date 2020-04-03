@@ -376,6 +376,12 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+" Automatically find python 2 & 3 providers for NeoVim
+if has('nvim')
+    let g:python_host_prog = system('which python2 | tr -d "\n"')
+    let g:python3_host_prog = system('which python3 | tr -d "\n"')
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
