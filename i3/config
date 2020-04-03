@@ -63,7 +63,9 @@
     set $ws5 "05"
     set $ws6 "06"
     set $ws7 "07"
-    set $ws8 "08"
+
+    set $ws8 "08-Social"
+    for_window [class="Tweetdeck"] move container to workspace $ws8
 
     set $ws9 "09-Mail"
     for_window [class="Thunderbird"] move container to workspace $ws9
