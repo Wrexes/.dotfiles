@@ -4,6 +4,7 @@
     "coc.source.around.enable": true,
     "coc.source.file.enable": true,
     "codeLens.enable": true,
+    "tsserver.npm": "/sbin/npm",
     "languageserver": {
         "clangd": {
             "command": "clangd",
