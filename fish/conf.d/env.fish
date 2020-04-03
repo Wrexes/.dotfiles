@@ -52,7 +52,7 @@ addenv EDITOR (which nvim)
 addenv TERMINAL kitty
 
 # Web browser
-addenv BROWSER vivaldi-stable
+# addenv BROWSER vivaldi-stable
 
 # Silly greeting
 addenv fish_greeting "Today is a good day to code avec le cul !"
