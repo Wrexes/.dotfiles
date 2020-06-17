@@ -320,7 +320,7 @@ bar {
     exec --no-startup-id i3-sensible-terminal
 
     # Blue light fliter
-    exec --no-startup-id fluxgui
+    exec --no-startup-id xflux -l 48.616280 -g 1.671550 -r 1
 
 
 
