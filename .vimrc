@@ -62,6 +62,11 @@ nmap <leader>W :w!<cr>
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
+" Enable mouse support in all modes
+if has('nvim')
+    set mouse=a
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
