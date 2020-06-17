@@ -15,6 +15,7 @@
   "api_key": "cykeulegxuoygcnebymyhvzaiwgjkf",
   "api_key_service_level": "Cloud",
   "api_base_url": null,
+  "binary_update_interval_seconds": null,
   "local_enabled": "Unset",
   "disable_local_when_using_battery": false,
   "hide_deep_information_message": false,
