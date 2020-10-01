@@ -22,6 +22,7 @@ Plug 'idanarye/vim-vebugger'
 Plug 'SirVer/ultisnips'
 if has ('nvim')
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'preservim/nerdcommenter'
 else
     Plug 'ycm-core/YouCompleteMe', {'do': './install.py --all --clangd-completer'}
     Plug 'Shougo/vimproc.vim', {'do' : 'make'}
