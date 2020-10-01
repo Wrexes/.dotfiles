@@ -15,10 +15,13 @@
 # -- Git / Gitnow
     # Alt+l : Print a git pretty-log
     bind \el 'git plog; echo; commandline -f repaint'
-    # Alt+s : Print a compact git status status
-    bind \es 'state; echo; commandline -f repaint'
     # Alt+g : Show a git diff
     bind \eg 'git diff; echo; commandline -f repaint'
+    ### Following shortcuts fix gitnow command display in 2 lines prompts.
+    # Alt+s : Print a compact git status status
+    bind \es 'state; echo; commandline -f repaint'
+    # Alt+m : Show last commit
+    bind \em 'show; echo; commandline -f repaint'
 
 
 # Perl Local::Lib
