@@ -313,14 +313,17 @@ bar {
     # Screenshot tool
     exec --no-startup-id flameshot
 
+    # Blue light fliter
+    exec --no-startup-id xflux -l 48.616280 -g 1.671550 -r 1
+
     # Auto hide mouse after 3 seconds
     exec --no-startup-id mousetrap -t 3
 
+    # PreMiD (https://premid.app)
+    exec --no-startup-id premid
+
     # Start a terminal
     exec --no-startup-id i3-sensible-terminal
-
-    # Blue light fliter
-    exec --no-startup-id xflux -l 48.616280 -g 1.671550 -r 1
 
 
 
@@ -347,6 +350,7 @@ bar {
     bindsym $mod+Ctrl+c exec caprine, exec --no-startup-id i3-msg workspace $ws10
 
     # Discord
+    # bindsym $mod+Ctrl+d exec discord-canary, exec --no-startup-id i3-msg workspace $ws10
     bindsym $mod+Ctrl+d exec discord, exec --no-startup-id i3-msg workspace $ws10
 
     # Mail Client
