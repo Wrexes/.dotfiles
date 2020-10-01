@@ -1,5 +1,4 @@
 fish_variables
-**__gitnow*
-conf.d/gitnow*
+**gitnow*
 completions/fisher.fish
 functions/fisher.fish
