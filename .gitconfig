@@ -17,10 +17,10 @@
 [user]
 	email = ludovic.fernandez@epitech.eu
 	name = Renard
-	github = fox-tek
+	github = Wrexes
 
 [core]
-	excludesfile = /home/renard/.dotfiles/tekgi
+    # excludesfile = /home/renard/.dotfiles/tekgi
 	pager = diff-so-fancy | bat --style=numbers,grid,snip
 
 [merge]
