@@ -120,3 +120,6 @@ setconf yay $cdir_yay/config.json
 # i3 Window Manager
 setcdir i3 $CFGDIR/i3
 setconf i3 $cdir_i3/config
+
+# Starship prompt
+setconf starship $CFGDIR/starship.toml
