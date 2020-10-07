@@ -16,11 +16,11 @@ staged_count.enabled = true
 staged_count.style = "fg:#f08000"
 
 [python]
-style = "bold fg:#474747"
-prefix = "🐍 "
+format = "[🐍 $version](bold fg:#474747) "
 
 [cmd_duration]
-min_time = 3
+min_time = 1000
+show_milliseconds = true
 format = "⌛ [$duration](fg:#474747)"
 
 [character]
