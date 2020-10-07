@@ -21,14 +21,11 @@ prefix = "🐍 "
 
 [cmd_duration]
 min_time = 3
-style = "fg:#474747"
-prefix = "🕙 "
+format = "⌛ [$duration](fg:#474747)"
 
 [character]
-style_success = "bold fg:#f08000"
-style_failure = "bold red"
-symbol = "->"
-error_symbol = "✗"
+success_symbol = "[❯](bold fg:#f08000)"
+error_symbol = "[✗](bold red)"
 use_symbol_for_status = true
 
 [jobs]
