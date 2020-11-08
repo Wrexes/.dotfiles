@@ -15,7 +15,7 @@
     cc = !git commit-count
 
 [user]
-	email = ludovic.fernandez@epitech.eu
+	email = ludofernandez@msn.com
 	name = Renard
 	github = Wrexes
     signingkey = 087938DAF4AFF6C7
