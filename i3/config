@@ -339,6 +339,8 @@ bar {
         bindsym $mod+Ctrl+Return exec rofi -show drun
         # Window cycler
         bindsym $mod+Tab exec rofi -modi window -show window -width 50
+        # Emojis
+        bindsym $mod+Shift+Return exec splatmoji type
 
     # Screenshot tool
     bindsym Print exec flameshot gui
