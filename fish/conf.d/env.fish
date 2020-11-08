@@ -52,7 +52,7 @@ addenv EDITOR (which nvim)
 addenv TERMINAL kitty
 
 # Web browser
-# addenv BROWSER vivaldi-stable
+addenv BROWSER vivaldi-stable
 
 # Silly greeting
 addenv fish_greeting "Today is a good day to code avec le cul !"
@@ -62,9 +62,6 @@ addenv BAT_THEME "Sublime Snazzy"
 
 # Use bat as main man pager
 addenv MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
-# Academic year
-addenv ACADEMIC_YEAR 2019
 
 # Delivery directory
 addenv deliv $HOME/repos/delivery
@@ -80,6 +77,9 @@ addenv mkrepo $deliv/makefiles
 
 # Global gitignore
 addenv tekgi $DOTDIR/tekgi
+
+# GPG TTY setting
+addenv GPG_TTY (tty)
 
 ########################################
 ##         CONFIG SETTINGS            ##
