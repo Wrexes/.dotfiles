@@ -464,6 +464,11 @@ let g:clang_format#detect_style_file=1
 autocmd FileType c,cpp,objc nnoremap <buffer><C-K> :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><C-K> :ClangFormat<CR>
 
+" CoC Formatter: Press F10 to use CoC's :Format command in NeoVim
+if has('nvim')
+    noremap <F10> :Format<CR>
+endif
+
 " NERDTree: shortcut
 map <C-n> :NERDTreeToggle<cr>
 
