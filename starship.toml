@@ -16,7 +16,10 @@ staged_count.enabled = true
 staged_count.style = "fg:#f08000"
 
 [python]
-format = "[🐍 $version](bold fg:#474747) "
+symbol = "🐍"
+pyenv_prefix = "@ "
+style = "bold fg:#474747"
+format = '[${symbol}( \($virtualenv\)) ${version}${pyenv_prefix}]($style) '
 
 [cmd_duration]
 min_time = 1000
