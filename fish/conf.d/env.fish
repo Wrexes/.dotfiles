@@ -44,6 +44,8 @@ addenv DOTDIR $HOME/.dotfiles
 ########################################
 # Locale
 addenv LANG en_GB.UTF-8
+addenv LANGUAGE en_GB.UTF-8
+addenv LC_ALL en_GB.UTF-8
 
 # Default editor
 addenv EDITOR (which nvim)
