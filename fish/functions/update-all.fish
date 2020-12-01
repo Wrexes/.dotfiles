@@ -33,14 +33,14 @@ function update-all --description 'Update everything with a single command.'
 #    echo; echo;
 
     figlet -tf slant "Fisher"
-    fisher self-update
+    fisher update
     if test ! $status -eq 0
         tput civis
         read -n1 -P "Error !"
         return
     end
-    fisher
     echo; echo;
     read -P "Press any key to continue." -n1 > /dev/null
+
     rfish
 end
