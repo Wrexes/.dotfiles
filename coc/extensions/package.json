@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "coc-actions": ">=1.4.2",
+    "coc-docker": ">=0.2.1",
+    "coc-eslint": ">=1.2.7",
+    "coc-fish": ">=1.0.11",
+    "coc-git": ">=1.7.13",
+    "coc-gitignore": ">=0.0.4",
+    "coc-html": ">=1.2.4",
+    "coc-json": ">=1.2.6",
+    "coc-marketplace": ">=1.7.0",
+    "coc-pairs": ">=1.2.21",
+    "coc-python": ">=1.2.12",
+    "coc-sh": ">=0.4.0",
+    "coc-smartf": ">=1.1.10",
+    "coc-snippets": ">=2.1.26",
+    "coc-sql": ">=0.2.22",
+    "coc-tabnine": ">=1.2.2",
+    "coc-ultisnips": ">=1.2.3",
+    "coc-utils": ">=0.0.13",
+    "coc-vimlsp": ">=0.8.0"
+  }
+}
