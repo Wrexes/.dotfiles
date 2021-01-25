@@ -1,11 +1,34 @@
 " Automatically install plug if it's not there
+" Install CoC plugins at next launch if user has nvim
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter *
+        \ PlugInstall --sync | UpdateRemotePlugins | bd
+            \ | if has('nvim')
+            \ |   CocInstall -sync
+                \ coc-marketplace
+                \ coc-utils
+                \ coc-actions
+                \ coc-pairs
+                \ coc-tabnine
+                \ coc-git
+                \ coc-sh
+                \ coc-fish
+                \ coc-json
+                \ coc-python
+                \ | bd
+            \ | endif
+            \ | source $MYVIMRC
 endif
 
-" Start plugin list
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+    \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+    \|   PlugInstall --sync | q
+    \| endif
+
+" Start plugin list-querry
 call plug#begin('$HOME/.vim/plugged')
 
 Plug 'Yohannfra/Nvim-Switch-Buffer'
@@ -21,7 +44,7 @@ Plug 'vim-scripts/Gummybears'
 Plug 'idanarye/vim-vebugger'
 Plug 'SirVer/ultisnips'
 if has ('nvim')
-    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'preservim/nerdcommenter'
 else
     Plug 'ycm-core/YouCompleteMe', {'do': './install.py --all --clangd-completer'}
@@ -32,9 +55,3 @@ endif
 
 " End plugin list
 call plug#end()
-
-" Automatically install missing plugins on startup
-autocmd VimEnter *
-    \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-    \|   PlugInstall --sync | q
-    \| endif
