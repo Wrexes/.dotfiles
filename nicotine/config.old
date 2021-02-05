@@ -1,0 +1,249 @@
+[server]
+server = ('server.slsknet.org', 2242)
+login = Sir Wrexes
+passw = iSjpr8*4Ybc4
+firewalled = False
+ctcpmsgs = False
+autosearch = []
+autoreply = 
+portrange = (2234, 2239)
+upnp = True
+userlist = []
+banlist = []
+ignorelist = []
+ipignorelist = {}
+ipblocklist = {'72.172.88.*': 'MediaDefender Bots'}
+autojoin = []
+autoaway = 15
+private_chatrooms = False
+
+[transfers]
+incompletedir = /home/renard/.local/share/nicotine/incompletefiles
+downloaddir = /home/renard/HomeBKP/Downloads
+uploaddir = /home/renard/nicotine-uploads
+sharedownloaddir = False
+shared = [('Shared', '/home/renard/HomeBKP/Music/shared')]
+buddyshared = []
+uploadbandwidth = 10
+uselimit = False
+uploadlimit = 150
+downloadlimit = 0
+preferfriends = False
+useupslots = False
+uploadslots = 2
+afterfinish = 
+afterfolder = 
+lock = True
+reverseorder = False
+prioritize = False
+fifoqueue = False
+usecustomban = False
+limitby = True
+customban = Banned, don't bother retrying
+queuelimit = 10000
+filelimit = 1000
+friendsonly = False
+friendsnolimits = False
+enablebuddyshares = False
+enabletransferbuttons = True
+groupdownloads = 1
+groupuploads = 1
+geoblock = False
+geopanic = False
+geoblockcc = ['']
+remotedownloads = True
+uploadallowed = 2
+autoclear_downloads = False
+autoclear_uploads = False
+uploadsinsubdirs = True
+rescanonstartup = False
+enablefilters = True
+downloadregexp = (\\(.*\.url|albumart(_{........-....-....-....-............}_)?(_?(large|small))?\.jpg|desktop\.ini|folder\.jpg|thumbs\.db)$)
+downloadfilters = [['*.url', 1], ['albumart(_{........-....-....-....-............}_)?(_?(large|small))?\\.jpg', 0], ['desktop.ini', 1], ['folder.jpg', 1], ['thumbs.db', 1]]
+download_doubleclick = 1
+upload_doubleclick = 1
+downloadsexpanded = True
+uploadsexpanded = True
+
+[userinfo]
+descr = ''
+pic = 
+
+[words]
+censored = []
+autoreplaced = {'teh ': 'the ', 'taht ': 'that ', 'tihng': 'thing', 'youre': "you're", 'jsut': 'just', 'thier': 'their', 'tihs': 'this'}
+censorfill = *
+censorwords = False
+replacewords = False
+tab = True
+cycle = False
+dropdown = True
+characters = 2
+roomnames = True
+buddies = True
+roomusers = True
+commands = True
+aliases = True
+onematch = True
+
+[logging]
+debug = False
+debugmodes = [0, 1]
+debuglogsdir = /home/renard/.local/share/nicotine/logs/debug
+logcollapsed = False
+transferslogsdir = /home/renard/.local/share/nicotine/logs/transfers
+rooms_timestamp = %H:%M:%S
+private_timestamp = %Y-%m-%d %H:%M:%S
+log_timestamp = %Y-%m-%d %H:%M:%S
+timestamps = True
+privatechat = False
+chatrooms = False
+transfers = False
+debug_file_output = False
+roomlogsdir = /home/renard/.local/share/nicotine/logs/rooms
+privatelogsdir = /home/renard/.local/share/nicotine/logs/private
+readroomlogs = True
+readroomlines = 15
+readprivatelines = 15
+rooms = []
+
+[privatechat]
+store = False
+users = []
+
+[columns]
+userbrowse = [1, 1, 1, 1]
+userbrowse_widths = [600, 100, 70, 0]
+userlist = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+userlist_widths = [0, 25, 180, 0, 0, 0, 0, 0, 160, 0]
+chatrooms = {}
+chatrooms_widths = {}
+download_columns = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+download_widths = [200, 250, 250, 140, 50, 70, 170, 90, 140, 0]
+upload_columns = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+upload_widths = [200, 250, 250, 140, 50, 70, 170, 90, 140, 0]
+filesearch_columns = [True, True, True, True, True, True, True, True, True, True, True]
+filesearch_widths = [50, 200, 25, 50, 90, 90, 481, 400, 100, 100, 320]
+hideflags = False
+
+[searches]
+expand_searches = True
+group_searches = 1
+maxresults = 50
+re_filter = True
+history = ['fiasco project', 'painbringer', 'dj arjuna', 'second spliff', 'dj thorax', 'dj thorax fuck your feelings']
+enablefilters = False
+defilter = ['', '', '', '', False, '']
+filtercc = []
+reopen_tabs = False
+filterin = ['second spliff', 'second', 'fiasco', 'feelings']
+filterout = []
+filtersize = []
+filterbr = []
+distrib_timer = False
+distrib_ignore = 60
+search_results = True
+max_displayed_results = 1000
+max_stored_results = 1500
+min_search_chars = 3
+remove_special_chars = True
+
+[ui]
+dark_mode = False
+icontheme = 
+chatme = FOREST GREEN
+chatremote = 
+chatlocal = BLUE
+chathilite = red
+urlcolor = #3D2B7F
+useronline = BLACK
+useraway = ORANGE
+useroffline = #aa0000
+usernamehotspots = True
+usernamestyle = bold
+textbg = 
+search = 
+searchq = GREY
+inputcolor = 
+spellcheck = True
+exitdialog = 1
+notexists = True
+tab_default = 
+tab_hilite = red
+tab_changed = #0000ff
+tab_select_previous = True
+tab_reorderable = True
+tabmain = Top
+tabrooms = Top
+tabprivate = Top
+tabinfo = Top
+tabbrowse = Top
+tabsearch = Top
+tab_status_icons = True
+chat_hidebuttons = False
+labelmain = 0
+labelrooms = 0
+labelprivate = 0
+labelinfo = 0
+labelbrowse = 0
+labelsearch = 0
+decimalsep = ,
+chatfont = Normal
+roomlistcollapsed = False
+tabclosers = True
+searchfont = Normal
+listfont = Normal
+browserfont = Normal
+transfersfont = Normal
+last_tab_id = 0
+modes_visible = {'chatrooms': 1, 'private': 1, 'downloads': 1, 'uploads': 1, 'search': 1, 'userinfo': 1, 'userbrowse': 1, 'interests': 1}
+modes_order = ['chatrooms', 'private', 'downloads', 'uploads', 'search', 'userinfo', 'userbrowse', 'interests', 'userlist']
+showaway = False
+buddylistinchatrooms = 0
+trayicon = True
+filemanager = xdg-open $
+speechenabled = False
+speechprivate = %(user)s told you.. %(message)s
+speechrooms = In %(room)s, %(user)s said %(message)s
+speechcommand = flite -t $
+width = 1918
+height = 1031
+xposition = 0
+yposition = 22
+maximized = True
+urgencyhint = True
+
+[private_rooms]
+rooms = {}
+
+[urls]
+urlcatching = True
+protocols = {}
+humanizeurls = True
+
+[interests]
+likes = []
+dislikes = []
+
+[players]
+default = 
+npothercommand = 
+npplayer = 
+npformatlist = []
+npformat = 
+
+[notifications]
+notification_window_title = True
+notification_tab_colors = False
+notification_tab_icons = True
+notification_popup_sound = True
+notification_popup_file = True
+notification_popup_folder = True
+notification_popup_private_message = True
+notification_popup_chatroom = False
+notification_popup_chatroom_mention = True
+
+[plugins]
+enable = True
+enabled = []
+
